@@ -334,19 +334,17 @@ max-width: 100px; /* Adjust as needed */
     align-items: center;
     justify-content: center;
 }
-
-
 /* Styling for certificate images */
 .certificates {
     display: flex;
     justify-content: space-around; /* Space out the images evenly */
     align-items: center;
-    flex-wrap: nowrap; /* Ensures the images stay in a horizontal line */
-    width: 100%; /* Set the width to full */
-    overflow-x: auto; /* Allows horizontal scrolling on small screens */
+    flex-wrap: nowrap; /* Ensure images stay in one line */
+    width: 100%; /* Full width of the container */
     margin: 0 auto; /* Center the section */
     padding: 10px 0; /* Add padding for spacing */
     box-sizing: border-box;
+    overflow-x: auto; /* Allow horizontal scrolling on small screens */
     scrollbar-width: none; /* Hide scrollbar for modern browsers */
 }
 
@@ -355,17 +353,17 @@ max-width: 100px; /* Adjust as needed */
 }
 
 .certificates img {
-    width: 100px;  /* Adjust the width for each certificate */
-    height: auto;   /* Maintain the aspect ratio of images */
+    flex-shrink: 0; /* Prevent images from shrinking */
+    width: calc(25% - 20px); /* Ensure images fit evenly, accounting for margin */
+    height: auto; /* Maintain the aspect ratio of images */
     margin: 0 10px; /* Spacing between certificates */
-    flex-shrink: 0; /* Prevent images from shrinking on small screens */
 }
 
 /* ISO-specific styles */
 .iso {
     border-radius: 50%;
-    width: 140px;
-    height: 140px; /* Set the height to maintain aspect ratio for round images */
+    width: calc(25% - 20px); /* Ensure ISO certificates match image styling */
+    height: auto; /* Maintain aspect ratio for round images */
     object-fit: cover; /* Ensures the image fills the container while keeping the aspect ratio */
 }
 
@@ -377,17 +375,17 @@ max-width: 100px; /* Adjust as needed */
 /* Responsive adjustments */
 @media (max-width: 576px) {
     .certificates {
-        justify-content: flex-start; /* Align items to start for small screens */
-        padding-left: 10px;
+        justify-content: space-between; /* Adjust alignment for smaller screens */
+        padding-left: 10px; /* Add padding to avoid clipping */
     }
-    .certificates img {
-        width: 80px; /* Smaller size for certificates on smaller devices */
-    }
+    .certificates img,
     .iso {
-        width: 100px;
-        height: 100px;
+        width: 70px; /* Smaller size for images on small screens */
+        height: auto; /* Maintain aspect ratio */
     }
 }
+
+
 
 </style>
 </head>
