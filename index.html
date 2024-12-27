@@ -341,24 +341,54 @@ max-width: 100px; /* Adjust as needed */
     display: flex;
     justify-content: space-around; /* Space out the images evenly */
     align-items: center;
-    width: 80%; /* Adjust the width */
+    flex-wrap: nowrap; /* Ensures the images stay in a horizontal line */
+    width: 100%; /* Set the width to full */
+    overflow-x: auto; /* Allows horizontal scrolling on small screens */
+    margin: 0 auto; /* Center the section */
+    padding: 10px 0; /* Add padding for spacing */
+    box-sizing: border-box;
+    scrollbar-width: none; /* Hide scrollbar for modern browsers */
+}
+
+.certificates::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for webkit browsers */
 }
 
 .certificates img {
-    width: 100px;  /* Adjust the width of each certificate */
+    width: 100px;  /* Adjust the width for each certificate */
     height: auto;   /* Maintain the aspect ratio of images */
     margin: 0 10px; /* Spacing between certificates */
-}
-.iso {
-  border-radius: 50%;
-  width: 140px; /* Set the width */
-  height: 10px; /* Set the height */
-  object-fit: cover; /* Ensures the image fills the container while keeping the aspect ratio */
+    flex-shrink: 0; /* Prevent images from shrinking on small screens */
 }
 
-.organic{
-  border-radius: 50%;
+/* ISO-specific styles */
+.iso {
+    border-radius: 50%;
+    width: 140px;
+    height: 140px; /* Set the height to maintain aspect ratio for round images */
+    object-fit: cover; /* Ensures the image fills the container while keeping the aspect ratio */
 }
+
+/* Organic-specific styles */
+.organic {
+    border-radius: 50%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .certificates {
+        justify-content: flex-start; /* Align items to start for small screens */
+        padding-left: 10px;
+    }
+    .certificates img {
+        width: 80px; /* Smaller size for certificates on smaller devices */
+    }
+    .iso {
+        width: 100px;
+        height: 100px;
+    }
+}
+
 </style>
 </head>
 
