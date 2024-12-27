@@ -291,64 +291,84 @@ max-width: 100px; /* Adjust as needed */
         }
 
         .details-section {
-            position: relative;
-            background: #f9f9f9;
-            border: 1px solid #ddd;
-            padding: 50px;
-            margin: 80px auto;
-            border-radius: 8px;
-            max-width: 1500px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            z-index: 1;
-            padding-left: 30px;
-            padding-right: 30px;
-            box-sizing: border-box;
-        }
+    position: relative;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 50px 30px 30px 30px; /* Default padding: top, right, bottom, left */
+    margin: 80px auto 30px auto;  /* Default margin for top, bottom, and center alignment */
+    border-radius: 8px;
+    max-width: 1500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    box-sizing: border-box;
+}
 
-        .details-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('cropsy nutrients_preview_rev_1.png') no-repeat center;
-            background-size: 50%;
-            opacity: 0.4;
-            z-index: -1;
-            pointer-events: none;
-        }
-/* Single media query for mobile screens */
+/* Adding the before pseudo-element for the background image */
+.details-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('cropsy nutrients_preview_rev_1.png') no-repeat center;
+    background-size: 50%;
+    opacity: 0.4;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Media Query for Mobile Screens (Max Width: 768px) */
 @media (max-width: 768px) {
     .details-section {
-        padding: 20px;
-        margin: 0 auto;  /* Center the entire section */
-        text-align: center;  /* Center text content */
-        display: flex;  /* Flexbox layout */
-        flex-direction: column;  /* Stack elements vertically */
-        justify-content: center; /* Align children to the center horizontally */
-        align-items: center;  /* Align items in the center (horizontal axis) */
+        padding: 20px 15px 20px 15px; /* Added padding to left, right, and bottom for mobile view */
+        margin: 20px auto;  /* Centered with auto left and right margins */
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    /* Remove unwanted styles for better layout */
+    /* Adjust the background image size for better responsiveness */
     .details-section::before {
         background-size: contain;
     }
 
-    /* Additional image styling, if needed */
+    /* Ensure images are responsive */
     .details-section img {
         max-width: 100%;
         height: auto;
-        margin-bottom: 1rem; /* space between the image and details */
+        margin-bottom: 1rem; /* Space between the image and details */
     }
 }
+
+/* Media Query for Tablets and Larger Devices (Max Width: 1024px) */
+@media (max-width: 1024px) {
+    .details-section {
+        padding: 40px 25px 30px 25px; /* Adjusted padding for tablets and medium devices */
+        margin-bottom: 30px;  /* Added bottom margin */
+        margin-left: 20px; /* Added left margin for better spacing */
+        margin-right: 20px; /* Added right margin for better spacing */
+    }
+}
+
+/* For desktop screens */
+@media (min-width: 1025px) {
+    .details-section {
+        padding: 50px 30px 30px 30px; /* Large padding with same values as before */
+        margin-left: 50px; /* Adds gap on left side */
+        margin-right: 50px; /* Adds gap on right side */
+    }
+}
+
 </style>
 </head>
 
 <body>
     <header class="curved-navbar">
         <div class="brand">
-            <img src="cropsylogo.jpeg" alt="Brand Logo" class="brand-logo">
+            <img src="cropsy nutrients logo.jpeg" alt="Brand Logo" class="brand-logo">
             <span class="brand-name"></span>
         </div>
         <nav>
