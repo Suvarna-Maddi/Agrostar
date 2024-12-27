@@ -160,44 +160,6 @@ display: block;
 width: 100%; /* Adjust as needed */
 max-width: 100px; /* Adjust as needed */
 }
- /* Footer */
- .foot {
-            height: 200px;
-            background: linear-gradient(to top, rgba(255, 255, 255, 0), #ffffff);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .foot::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(to top, #4CAF50, #2A9D8F, #ffffff);
-            border-radius: 10% 10% 0 0;
-        }
-
-        .foot-content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-        }
- /* Footer styles */
- .foot {
-            position: relative;
-            background: linear-gradient(to top, #4CAF50, #2A9D8F, #ffffff);
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
         .product-showcase {
             position: relative;
             display: flex;
@@ -206,6 +168,8 @@ max-width: 100px; /* Adjust as needed */
             text-align: center;
             overflow: hidden;
             margin-bottom: -10px;
+           top: 25px;
+           margin-bottom: 20px; 
         }
 
         .curved-background {
@@ -257,8 +221,6 @@ max-width: 100px; /* Adjust as needed */
         .image-section {
             text-align: center;
             position: relative;
-            top:50px;
-            bottom:50px;
         }
 
         .product-image {
@@ -330,7 +292,6 @@ max-width: 100px; /* Adjust as needed */
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        top:50px;
     }
 
     /* Adjust the background image size for better responsiveness */
@@ -343,10 +304,6 @@ max-width: 100px; /* Adjust as needed */
         max-width: 100%;
         height: auto;
         margin-bottom: 1rem; /* Space between the image and details */
-    }
-    .image-section{
-        top:50px;
-        bottom:50px;
     }
 }
 
@@ -368,7 +325,40 @@ max-width: 100px; /* Adjust as needed */
         margin-right: 50px; /* Adds gap on right side */
     }
 }
+/* Footer styles */
+.foot {
+    position: relative;
+    background: linear-gradient(to top, #4CAF50, #2A9D8F, #ffffff);
+    height: 250px; /* Adjusted height to fit certificates */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+
+/* Styling for certificate images */
+.certificates {
+    display: flex;
+    justify-content: space-around; /* Space out the images evenly */
+    align-items: center;
+    width: 80%; /* Adjust the width */
+}
+
+.certificates img {
+    width: 100px;  /* Adjust the width of each certificate */
+    height: auto;   /* Maintain the aspect ratio of images */
+    margin: 0 10px; /* Spacing between certificates */
+}
+.iso {
+  border-radius: 50%;
+  width: 140px; /* Set the width */
+  height: 10px; /* Set the height */
+  object-fit: cover; /* Ensures the image fills the container while keeping the aspect ratio */
+}
+
+.organic{
+  border-radius: 50%;
+}
 </style>
 </head>
 
@@ -412,12 +402,21 @@ max-width: 100px; /* Adjust as needed */
   <b>Eco-Friendly Solution:</b> A sustainable, chemical-free fertilizer designed to nurture both your crops and the environment.</p><br>
                   <p><b>Dosage:</b> 1-2 gm per liter of water</p>
               </div>
+              </div>
               
-            </div>
         </div>
     </main>
     <footer class="foot">
-    </footer>
+      <div class="foot-content">
+          <div class="certificates">
+              <img src="organic certificate.jpg" alt="Certification 1" class="organic">
+              <img src="iso certificate.png" alt="Certification 2" class="iso">
+              <img src="mnslogo.jpg" alt="Certification 3" >
+              <img src="ugafs certificate.png" alt="Certification 4" >
+          </div>
+      </div>
+  </footer>
+  
     <script>
       function toggleMenu() {
           const navLinks = document.querySelector('.nav-links');
