@@ -329,42 +329,39 @@ max-width: 100px; /* Adjust as needed */
 .foot {
     position: relative;
     background: linear-gradient(to top, #4CAF50, #2A9D8F, #ffffff);
-    height: 250px; /* Adjusted height to fit certificates */
+    height: 250px; /* Fixed height for the footer */
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden; /* Prevent overflowing elements */
+    padding: 0 20px;
 }
+
 /* Styling for certificate images */
 .certificates {
     display: flex;
-    justify-content: space-around; /* Space out the images evenly */
+    justify-content: space-between; /* Equal spacing between images */
     align-items: center;
-    flex-wrap: nowrap; /* Ensure images stay in one line */
-    width: 100%; /* Full width of the container */
-    margin: 0 auto; /* Center the section */
-    padding: 10px 0; /* Add padding for spacing */
+    flex-wrap: nowrap; /* Ensure all images stay on one row */
+    width: 100%;
+    max-width: 1200px; /* Restrict the content width for proper alignment */
+    margin: 0 auto; /* Center the certificates section */
+    padding: 10px 0;
     box-sizing: border-box;
-    overflow-x: auto; /* Allow horizontal scrolling on small screens */
-    scrollbar-width: none; /* Hide scrollbar for modern browsers */
-}
-
-.certificates::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for webkit browsers */
 }
 
 .certificates img {
     flex-shrink: 0; /* Prevent images from shrinking */
-    width: calc(25% - 20px); /* Ensure images fit evenly, accounting for margin */
-    height: auto; /* Maintain the aspect ratio of images */
+    width: 20%; /* Ensure 4 images fit in one row */
+    max-width: 150px; /* Limit the maximum width for images */
+    height: auto; /* Maintain the aspect ratio */
     margin: 0 10px; /* Spacing between certificates */
+    object-fit: contain; /* Fit image within container without distortion */
 }
 
 /* ISO-specific styles */
 .iso {
     border-radius: 50%;
-    width: calc(25% - 20px); /* Ensure ISO certificates match image styling */
-    height: auto; /* Maintain aspect ratio for round images */
-    object-fit: cover; /* Ensures the image fills the container while keeping the aspect ratio */
 }
 
 /* Organic-specific styles */
@@ -372,20 +369,21 @@ max-width: 100px; /* Adjust as needed */
     border-radius: 50%;
 }
 
-/* Responsive adjustments */
-@media (max-width: 576px) {
-    .certificates {
-        justify-content: space-between; /* Adjust alignment for smaller screens */
-        padding-left: 10px; /* Add padding to avoid clipping */
-    }
-    .certificates img,
-    .iso {
-        width: 70px; /* Smaller size for images on small screens */
-        height: auto; /* Maintain aspect ratio */
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .certificates img {
+        width: 18%; /* Slightly smaller images */
+        max-width: 100px;
+        margin: 0 5px;
     }
 }
 
-
+@media (max-width: 576px) {
+    .certificates img {
+        width: 15%; /* Further reduce size for very small screens */
+        max-width: 80px;
+    }
+}
 
 </style>
 </head>
