@@ -101,6 +101,28 @@
     margin: 4px;
     transition: all 0.3s ease;
   }
+        .foot-content {
+    max-width: 1200px;
+    width: 90%;
+    text-align: center; /* Center-aligns text within the footer content */
+    margin: 0 auto; /* Centers the entire footer content block */
+}
+
+.certificates-heading {
+    font-size: 1.5rem; /* Adjust heading size as needed */
+    font-weight: bold;
+    color: #fff; /* Ensures visibility on the footer background */
+    margin-bottom: 20px; /* Adds spacing between the heading and certificates */
+}
+        .certificates {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap; /* Keeps images in a horizontal row */
+    gap: 15px;
+    overflow-x: auto; /* Enables horizontal scroll if needed on small screens */
+    padding: 10px 0;
+}
 
   /* Responsive design */
   @media (max-width: 768px) {
