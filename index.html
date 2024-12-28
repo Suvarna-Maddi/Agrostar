@@ -372,11 +372,15 @@ max-width: 100px; /* Adjust as needed */
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .certificates img {
-        width: 18%; /* Slightly smaller images */
+        width: 20%; /* Slightly smaller images */
         max-width: 100px;
         margin: 0 5px;
+        gap:5px;
     }
+    .certificates-heading{
+        align-text:center;
 }
+        
 
 @media (max-width: 576px) {
     .certificates img {
@@ -434,6 +438,7 @@ max-width: 100px; /* Adjust as needed */
     </main>
     <footer class="foot">
       <div class="foot-content">
+          <h4 class="certificates-heading">Certified Organic Excellence</h4>
           <div class="certificates">
               <img src="organic certificate.jpg" alt="Certification 1" class="organic">
               <img src="iso certificate.png" alt="Certification 2" class="iso">
