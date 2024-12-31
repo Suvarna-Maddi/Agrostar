@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="description" content="Discover Agrostar, an organic fertilizer rich in microorganisms for better soil nutrition. Learn more about its benefits and usage.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore Organic Fields - the best place to buy organic nutrients for your fields. Boost your crop yield with eco-friendly, natural solutions.">
-  <meta name="keywords" content="organic nutrients, farming solutions, eco-friendly, sustainable farming, organic farming">
-  <meta name="author" content="Your Name">
     <title>Agro Star | Cropsy Nutrients</title>
     <style>
         
@@ -350,162 +347,101 @@ max-width: 100px; /* Adjust as needed */
         margin-right: 50px; /* Adds gap on right side */
     }
 }
-.foot {
+/* Footer Styles */
+#footer {
   position: relative;
   background: linear-gradient(to top, #4CAF50, #2A9D8F, #ffffff);
-  height: 500px; /* Fixed height for the footer */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden; /* Prevent overflowing elements */
-  padding: 0 20px;
-}
-.footer .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;  
 }
 
-.footer-top {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  gap: 15px;
+/* Footer Container */
+#footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.footer-column {
-  flex: 1;
-  min-width: 150px;
-  text-align: center;
-}
-
-.footer-column h3 {
-  margin-bottom: 10px;
-  font-size: 1.7rem;
-  color: white;
-}
-
-.footer-column ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 0;
-}
-
-.footer-links li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.footer-links li a:hover {
-  color: #f0d023;
-}
-
-/*.certifications {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-  justify-content: center;
-  margin-top: 10px;
-}*/
-#iso {
-    border-radius: 50%;
-}
-#org {
-    border-radius: 50%;
-}
-
-.certifications {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px; /* Increased gap to provide more space between images */
-  width: 100%;
-  max-width: 1200px; /* Restrict width to avoid stretching */
-  margin: 0 auto;
-}
-
-.certification {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.certifications img {
-  object-fit: cover; /* Ensures the images fit properly inside the specified dimensions */
-  border-radius: 10px; /* Add border radius for rounded corners if desired */
-}
-
-.cir {
-  border-radius: 50%; /* Circular certificates for "org" and "iso" */
-}
-
-.sq {
-  border-radius: none; /* Square certificates for "ugafs" and "mns" */
-}
-
-.certifications img:hover {
-  transform: scale(1.1); /* Apply zoom effect when hovering */
-}
-
-
-
-
-/* Responsive adjustments */
-@media (max-width: 786px) {
-   .certifications {
-       gap: 5px; /* Increase gap for better spacing */
-       grid-template-columns: repeat(2, 1fr); /* Two columns layout for mobile */
-       justify-content: center; /* Center the certificates */
-   }
-
-   .certifications img {
-       width: 45%; /* Increase the size of images on smaller screens */
-       max-width: 220px; /* Adjust the maximum width for mobile */
-   }
-}
-
-
-.certification span {
-  margin-top: 5px;
-  font-size: 0.85rem;
-  color: #ddd;
-}
-
-.footer-bottom {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #ccc;
-}
-@media(max-width:786px){.footer-top {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .footer-column ul {
-    flex-direction: row;
+/* Quick Links Section */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
     justify-content: center;
-    gap: 12px;
     flex-wrap: wrap;
-  }
+    gap: 20px; /* Space between links */
+}
 
-  .certifications {
-    grid-template-columns: repeat(4, 1fr);
-    margin-top: 15px;
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffc107;
+}
+
+/* Certifications Section */
+.foot-content {
+    margin-top: 20px;
+}
+
+.certificates-heading {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.certificates {
+    display: flex;
     justify-content: center;
-    gap: 20px; /* Increased gap to provide more space between images */
+    flex-wrap: wrap;
+    gap: 25px; /* Space between certificate images */
+}
 
-  }
-  .sq{
-    border-radius:none;
-  }
+.certificates img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
 
- 
+/* Specific Styles for ISO and Organic Certificates */
+.certificates img.organic, 
+.certificates img.iso {
+    border-radius: 50%;
+}
+
+.certificates img:hover {
+    transform: scale(1.1);
+}
+
+.mns {
+  width: 180px; /* Set a wider width for the mns logo */
+  height: auto; /* Adjust height to maintain aspect ratio */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Maintain layout in small screens */
+    .footer-links {
+        gap: 10px;
     }
+
+    .certificates img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
 </style>
 </head>
 
@@ -516,12 +452,14 @@ max-width: 100px; /* Adjust as needed */
             <span class="brand-name"></span>
         </div>
         <nav>
-           <ul class="nav-links">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="contactus.html">Contact Us</a></li>
-      </ul>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
             <div class="hamburger" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
@@ -551,46 +489,31 @@ nutrients from the soil.
     </main>
     <footer class="foot" id="footer">
       <div class="container">
-        <!-- Top Section: Quick Links & Resources -->
-        <div class="footer-top">
           <!-- Quick Links -->
-          <div class="footer-column">
-            <h3>Quick Links</h3>
-            <ul class="footer-links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="aboutus.html">About Us</a></li>
-              <li><a href="products.html">Products</a></li>
-              <li><a href="tel:+918341997766">Contact</a></li>
-              <li><a href="https://wa.me/918341997766?text=Hello%20Cropsy%20Nutrients" target="_blank" class="nav-link p-0">WhatsApp</a></li>
-              
-            </ul>
+          <div class="footer-top">
+            <div class="footer-column">
+              <h3>Quick Links</h3>
+              <ul class="footer-links">
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#about us">About</a></li>
+                  <li><a href="#products">Products</a></li>
+                  <li><a href="tel:+918341997766">Contact</a></li>
+                  <li><a href="https://wa.me/918341997766?text=Hello%20Cropsy%20Nutrients" target="_blank">WhatsApp</a></li>
+              </ul>
           </div>
   
-          <!-- Resources -->
-          
-        </div>
-  
-        <!-- Certifications Section -->
-        <div class="footer-column">
-          <h3>Certified By:</h3>
-          <div class="certifications">
-            <div class="certification">
-              <img class="cir" id="org" src="organic certificate.jpg" alt="organic Certified" style="height: 90px; width: 90px;">
-            </div>
-            <div class="certification">
-              <img class="cir" id="iso" src="iso certificate.png" alt="ISO Approved" style="height: 90px; width: 90px;">
-            </div>
-            <div class="certification">
-              <img class="sq" id="ugafs" src="ugafs certificate.png" alt="UGAFS Certified" style="height: 80px; width: 80px;">
-            </div>
-            <div class="certification">
-              <img class="sq" id="mns" src="mnslogo.jpg" alt="MNS Certified" style="height: auto; width: 120px;">
-            </div>
+          <!-- Certifications -->
+          <div class="foot-content">
+              <h4 class="certificates-heading">Our Certifications</h4>
+              <div class="certificates">
+                  <img src="organic certificate.jpg" alt="Certification 1" class="organic">
+                  <img src="iso certificate.png" alt="Certification 2" class="iso">
+                  <img src="mnslogo.jpg" alt="Certification 3" class="mns">
+                  <img src="ugafs certificate.png" alt="Certification 4">
+              </div>
           </div>
-        </div>
       </div>
-    </footer>
-  
+  </footer>
   
   
     <script>
